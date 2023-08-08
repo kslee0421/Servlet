@@ -1,0 +1,32 @@
+package web;
+//Controller servlet으로만들면 Controller
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+
+public class main extends HttpServlet {
+	//웹 통신에 사용하기 위한 암호화된 페이지 명시한 메모리 형태의 명령어
+	private static final long serialVersionUID = 1L; //2L도 해도됨 건들일이 없음
+       
+
+    public main() {
+        super();
+  
+    }// Class명과 method 명이 같으면 즉시 실행  : 즉시실행 메소드
+
+	//doGet = Method Get전송시 사용
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String a = request.getParameter("data");
+		System.out.println(a);
+	}
+
+	//doPost = method Post전송시 사용
+/*	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	}
+*/
+}
