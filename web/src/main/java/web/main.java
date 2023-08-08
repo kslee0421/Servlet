@@ -7,8 +7,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
-
 public class main extends HttpServlet {
 	//웹 통신에 사용하기 위한 암호화된 페이지 명시한 메모리 형태의 명령어
 	private static final long serialVersionUID = 1L; //2L도 해도됨 건들일이 없음

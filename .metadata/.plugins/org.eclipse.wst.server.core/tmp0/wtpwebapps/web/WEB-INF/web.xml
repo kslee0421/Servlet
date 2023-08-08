@@ -23,6 +23,15 @@
   	<url-pattern>/calok.do</url-pattern>
   </servlet-mapping>
   
+   <servlet>
+  	<servlet-name>lotto_page</servlet-name>
+  	<servlet-class>web.lottoController</servlet-class> <!--package.class 이름-->
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>lotto_page</servlet-name>
+  	<url-pattern>/lotto_ok.do</url-pattern>
+  </servlet-mapping>
+  
   
   
 </web-app>
