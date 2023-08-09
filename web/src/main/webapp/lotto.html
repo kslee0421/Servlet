@@ -4,25 +4,138 @@
 <meta charset="UTF-8">
 <title>lotto</title>
 </head>
-<body>
+<>
 <form id="f" method="post" action="./lotto_ok.do" >
-숫자1 <input type="text" name="no1" id="no1"><br> 
-숫자2 <input type="text" name="no2" id="no2"><br>
-숫자3 <input type="text" name="no3" id="no3"><br>
-숫자4 <input type="text" name="no4" id="no4"><br>
-숫자5 <input type="text" name="no5" id="no5"><br>
-숫자6 <input type="text" name="no6" id="no6"><br>    
+<input type="hidden" id="">
+숫자1 <input type="text" name="no1" id="no0" class="no"><br> 
+숫자2 <input type="text" name="no2" id="no1" class="no"><br>
+숫자3 <input type="text" name="no3" id="no2" class="no"><br>
+숫자4 <input type="text" name="no4" id="no3" class="no"><br>
+숫자5 <input type="text" name="no5" id="no4" class="no"><br>
+숫자6 <input type="text" name="no6" id="no5" class="no"><br>    
+
+숫자1 <input type="text" name="no" id="no0" class="no"><br> 
+숫자2 <input type="text" name="no" id="no1" class="no"><br>
+숫자3 <input type="text" name="no" id="no2" class="no"><br>
+숫자4 <input type="text" name="no" id="no3" class="no"><br>
+숫자5 <input type="text" name="no" id="no4" class="no"><br>
+숫자6 <input type="text" name="no" id="no5" class="no"><br>
 <input type="button" value="전송" onclick="abc()">
 </form>
+
+<!--#1 is 배열형태-->
+<input type="button" value="배열클릭" onclicl="bbb()">
 <script>
+<ul id="uldata">
+</ul>
+//#1 is 배열형태
+ function bbb(){
+	 var data = []; //빈배열
+	 var d =[1,2,3,4,5,"홍길동","김유신"]; //숫자배열
+	 var z = ["1","2","3","4","5"]; //문자배열
+	 console.log(z.lenght); //배열 갯수
+	 "var money = ["2000","3000","3000""3000"];'
+	 console.log(d[2]); //배열뵨슈에 배열번호 값을 입력하여 해당 데이커를 출력
+	 data[0] ="홍길동";
+	 console.log(data);
+	 
+	 var w = 0;
+	 while (e<d.lenght){
+		 document.getElementById("uldata").innerHTML +="<li>"+d[w]+"</li>";
+		 w++;"
+	 } 
+ }
+	
 	function abc(){
+		//해당변수는 사용자가 조건에 맞는 모든 값을 입력하였을 경우 submit이 작동 되도록함
+		var ck ="yes";
+		var ea =document.getElementsByClassName("no").length;
+		//class와 name은 배열 형태이다
+		var w =0;
+		while (w <= ea){
+			if(document.getElementsByName("no")[w].value==""){
+				alert("숫자값을 모두 입력해 주세요");
+				ck="no";
+				break;
+			}
+			else{
+				//NaN : Not a Number
+				//isNaN : true(문자), false(숫자)
+				if(isNaN(document.getElementsByName("no")[w].value=="")==true){
+					alert("숫자만 입력해 주세요");
+					ck="no";
+					break;
+				}
+			}w++;
+		}
+		if(ck == "yes"){
+			f.submit();
+		}
+		
+		var ww= 0;
+		var total =0;
+		do{
+			total+= Number(money[ww]);
+			ww++;
+			
+		}while(ww<money.lenght)
+		console.log(total);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		//class형태
+		var ea =document.getElementsByClassName("no"); //같은 클래스를 모두 가져온다.
+		//console.log(ea.lenght);
+		var w =1;
+		var e =0;
+		while (w <= ea){
+			var nm = document.getElementByName("no")[e]; //ver2
+				if(f.nm+w.value==""){
+				alert("숫자값을 모두 입력해 주세요");
+				break;
+			}
+			w++;
+		}
+		
+/*		var e =0;
+		while (w <= ea){
+
+				if(document.getElementByName("no")[w].value==""){
+				alert("숫자값을 모두 입력해 주세요");
+				break;
+			}
+			w++;
+		}*/
+		//id형태로 가지고오는거
+/*		var w =0;
+		while (w < 6){
+			var ifs = document.getElementById("no"+w);
+			if(ids.value==""){
+				alert("숫자값을 모두 입력해 주세요");
+				ids.focus();
+				break;
+			}
+			w++;
+		}*/
+		
 		//console.log("Test")
-		var no1 = document.getElementById("no1");
-		var no2 = document.getElementById("no2");
-		var no3 = document.getElementById("no3");
-		var no4 = document.getElementById("no4");
-		var no5 = document.getElementById("no5");
-		var no6 = document.getElementById("no6");		
+		/*var no1 = document.getElementById("no0");
+		var no2 = document.getElementById("no1");
+		var no3 = document.getElementById("no2");
+		var no4 = document.getElementById("no3");
+		var no5 = document.getElementById("no4");
+		var no6 = document.getElementById("no5");		
 		if(no1.value == ""){
 			alert("첫번째 숫자 값을 입력하세요");
 			no1.focus();
@@ -49,7 +162,7 @@
 		}
 		else{
 			f.submit();
-		}
+		}*/
 	}	
 </script>
 </body>
