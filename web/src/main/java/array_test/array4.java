@@ -28,12 +28,12 @@ public class array4 {
 		 */
 		
 		String member[] = {"hong", "kim","park","jang","sun","so","han","jung"};
-		String member2[] = new String[member.length];
+		String member2[] = new String[member.length]; //빈배열생성
 		int ct = 0;
 		int array2 = 0; //배열 번호를 지정하기위한 변수 
 		for(String m : member) {
-			if(m.length() >=4) {
-				member2[ct] = m;
+			if(m.length() >=4) {  //배열값중 단어가 4자리 이상 조건
+				member2[ct] = m; 
 				ct++;
 			}
 		}

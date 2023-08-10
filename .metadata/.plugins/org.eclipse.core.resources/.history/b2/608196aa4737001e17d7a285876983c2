@@ -1,0 +1,31 @@
+package array_test;
+//2차 배열
+//
+public class array6 {
+
+	public static void main(String[] args) {
+		new array6().test();
+
+	}
+	public void test() {
+		//int a[] = new int[2];
+		//a[0] =1;  //정적배열		
+		//int b[] = {1,2,3,4,5};  //동적배열
+		
+		String member[][] = {
+				{"박초롬","윤보미","정은지","김남주","오하영"},
+				{"31","29","33","31","32"}
+		};
+		int ea = member.length;
+		System.out.println(ea);
+		int data_ea = member[0].length;
+		System.out.println(data_ea);
+		//응용문제 8
+		int f,ff=0; 
+		for(f=0;f<ea;f++) { //2바퀴
+			for(ff=0;ff<data_ea;ff++) {				
+				System.out.println(member[f][ff]);	
+			}
+		}
+	}
+}
