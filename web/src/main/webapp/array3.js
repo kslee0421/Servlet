@@ -3,7 +3,7 @@ let array;
 //const array;  //배열값 상수값....위에서 선언하면 값이 바뀌지 않게된다.
 function calldata(data){
 	console.log(data);
-	 this.array = data;
+	this.array = data;
 }
 function abc(){
 	console.log(this.array);
