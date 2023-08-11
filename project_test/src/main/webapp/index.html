@@ -1,0 +1,674 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>국민건강보험</title>
+	<meta property="og:type" content="website" />
+    <meta property="og:site_name" content="국민건강보험" />
+    <meta property="og:title" content="main" />
+    <meta property="og:description" content="이경선의 국민건강보험 홈페이지 포트폴리오 입니다." />
+    <meta property="og:image" content="images/logo.png" />
+    <meta property="og:url" content="https://www.nhis.or.kr/" />
+	<meta name="Description" content="국민건강보험 홈페이지 포트폴리오"/>
+	<meta name="Generator" content="Notepad++"/>
+	<meta name="Author" content="이경선"/>
+	<meta name="Keywords" content="이경선, Lee Kyoungsun, 포트폴리오, 이경선 포트폴리오, portfolio, Portfolip, Kyoungsun's portfolio, 경선, Kyoungsun, LEEKYOUNGSUN, KYOUNGSUN, KyoungsunLee, Kyoungsun Lee, 경선 이, 포폴, JAVA, Kotlin, 코틀린, 자바, 웹, Web, java, app, application, eclipse, olacle, notepad, html, css, html5, css3, 국민건강보험,Kyoungsun's portfolio "/>
+	
+	<link rel="icon" href="images/favicon.ico" />
+	
+	<link rel="stylesheet" href="./style.css">
+	<link rel="stylesheet" href="./common.css">
+	
+	<script src="./jquery-1.9.1.min.js"></script>
+	<script src="./jquery.easing.1.3.min.js"></script>
+	<script src="./jquery-ui-1.10.4.custom.min.js"></script>
+	<script src="./jquery.cookie.js"></script>
+    <script src="./count.js"></script>
+    <script src="./common.js"></script>
+    <script src="./script.js"></script>
+
+</head>
+<body onLoad="ddaycount()">		
+<!-- #####HEADER##### -->
+	<header>
+		<div id="header">
+			<div id="gnb">
+				<div class="inner">
+					<div id="webAcc">
+						<div id="zoom">
+							<ul>
+								<li ><span class="fontLine">화면</span></li>
+								<li><span><button class="increase" id="zoomIn" type="button" title="화면 확대"></button></span></li>
+								<li><span><button class="decrease" id="zoomOut" type="button" title="화면 축소"></button></span></li>
+							</ul>
+						</div><!-- class="zoom" -->
+						<div id="sound" >
+							<ul>
+								<li><span class="fontLine">프린트</span></li>
+								<li><span><button class="print" id="println" type="button" title="소리 확대"></button></span></li>
+							</ul>
+						</div><!-- class="sound" --> 
+					</div><!-- id="webAcc" -->
+					<div id="gnbMenu" >
+						<ul>
+							<li class="showBalloon" title="로그인"><a href="sub2/sub2.html"><span>로그인</span></a></li>
+							<li class="line showBalloon" title="회원가입"><a href="#"><span>회원가입</span></a></li>
+							<li class="line showBalloon" title="인증서안내"><a href="#"><span>인증서안내</span></a></li>
+							<li class="line showBalloon" title="전체메뉴"><a href="#"><span>전체메뉴</span></a></li>
+							<li class="line showBalloon" title="Language"><a href="#">Language<span class="arrow"><img src="images/arrow-navy-8x6.png" width="8" height="6" alt="allow 아이콘"  onmouseover="this.src='images/arrow-navy-8x6-on.png'" onmouseout="this.src='images/arrow-navy-8x6.png'"></span></a>
+								<ul class="language">
+									<li class="showBalloon" title="English"><a href="#">English</a></li>
+									<li class="showBalloon" title="中文"><a href="#">中文</a></li>
+									<li class="showBalloon" title="日本"><a href="#">日本</a></li>
+									<li class="showBalloon" title="Tiếng Việt"><a href="#">Tiếng Việt</a></li>
+								</ul>
+							</li>
+							<li class="line"><a class="last" href="#"><span class="last">분야별업무사이트</span><span class="arrow"><img src="images/arrow-navy-8x6.png" width="8" height="6" alt="allow 아이콘"></span></a>
+								<ul class="siteList">
+									<li class="showBalloon" title="사회보험 통합징수"><a href="#"><span class="siteIcon01"></span><span>사회보험<br>통합징수</span></a></li>
+									<li class="showBalloon" title="노인장기 요양보험"><a href="#"><span class="siteIcon02"></span>노인장기<br>요양보험</a></li>
+									<li class="showBalloon" title="요양기관 정보마당"><a href="#"><span class="siteIcon03"></span>요양기관<br>정보마당</a></li>
+									<li class="showBalloon" title="EDI 서비스"><a href="#"><span class="siteIcon04"></span>EDI<br>서비스</a></li>
+									<li class="showBalloon" title="건강관리 포털"><a href="#"><span class="siteIcon05"></span>건강관리<br>포털</a></li>
+									<li class="showBalloon" title="건강보험 공유"><a href="#"><span class="siteIcon06"></span>건강보험<br>공유</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div><!-- id="gnbMenu" -->
+				</div><!-- class="inner" -->
+				<div id="quickMenu" >
+					<ul>
+						<li class="iconRelease"><a href="#">정보공개</a></li>
+						<li class="iconConplain"><a href="#">민원상담</a></li>
+						<li class="iconCustomer"><a href="#">고객센터</a></li>
+						<li class="iconSecurity"><a href="#">보안프로그램</a></li>
+						<li class="iconForm"><a href="#">서식자료실</a></li>
+						<li class="iconKakao"><a href="#">채팅 상담</a></li>
+					</ul>
+				</div>	
+			</div><!-- id="gnb" -->				
+			<div id="lnb">
+				<div id="lnbMenu">
+					<ul id="oneDepth" class="cf">
+						<li id="mainLogo" class="showBalloon" title="메인화면으로"><a href="index.html" class="logo"><img src="images/logo.png" alt="mainLogo" width="159" height="62"><h1><span>국민건강보험 홈페이지 포트폴리오</span></h1></a></li>
+						<li class="showBalloon" title="민원여기요" ><a href="sub1/sub1.html" tabindex="1"><span>민원여기요</span></a>
+							<div class="twoInner1 db cf fl">
+								<ul class="twoDepth">
+									<li class="gnbVisual fl"><a href="index.html"><img src="images/gnb-visual.png" width="130" height="134" alt="gnbVisual"></a></li>
+									<li class=" threeInner showBalloon fl" title="민원안내"><h2><a href="sub01/sub01.html">민원안내</a></h2>
+										<ul>
+											<li class="showBalloon" title="개인 민원안내"><a href="#">개인 민원안내</a></li>
+											<li class="showBalloon" title="사업장 민원안내"><a href="#">사업장 민원안내</a></li>
+											<li class="showBalloon" title="자주 묻는 질문"><a href="#">자주 묻는 질문</a></li>
+											<li class="showBalloon" title="서식자료실"><a href="#">서식자료실</a></li>
+											<li class="showBalloon" title="장기요양 서식자료실"><a href="#">장기요양 서식자료실</a></li>
+											<li class="showBalloon" title="사업장 웹 민원 서식"><a href="#">사업장 웹 민원서식</a></li>
+										</ul>
+									</li>
+									<li class=" threeInner showBalloon fl" title="개인민원"><h2><a href="sub1/sub1.html">개인민원</a></h2>
+										<ul>
+											<li class="showBalloon" title="개인민원업무 목록"><a href="#">개인민원업무 목록</a></li>
+											<li class="showBalloon" title="증명서발급/확인"><a href="#">증명서발급/확인</a></li>
+											<li class="showBalloon" title="자격조회"><a href="#">자격조회</a></li>
+											<li class="showBalloon" title="보험료 조회 신청"><a href="#">보험료 조회 신청</a></li>
+											<li class="showBalloon" title="보험료 납부"><a href="#">보험료 납부</a></li>
+											<li class="showBalloon" title="보험료 고지서"><a href="#">보험료 고지서</a></li>
+										</ul>
+									</li>							
+									<li class=" threeInner showBalloon fl" title="사업장민원"><h2><a href="sub1/sub1.html">사업장민원</a></h2>
+										<ul>
+											<li class="showBalloon" title="사업장민원업무 목록"><a href="#">사업장민원업무 목록</a></li>
+											<li class="showBalloon" title="조회/발급"><a href="#">조회/발급</a></li>
+											<li class="showBalloon" title="보험료 납부"><a href="#">보험료 납부</a></li>
+											<li class="showBalloon" title="개인 민원안내"><a href="#">증명서 진위확인</a></li>
+											<li class="showBalloon" title="증명서 진위확인"><a href="#">EDI서비스</a></li>
+											<li class="showBalloon" title="사업장 웹 민원서식"><a href="#">사업장 웹 민원서식</a></li>
+										</ul>
+									</li>							
+									<li class=" threeInner showBalloon fl" title="상담문의"><h2><a href="sub1/sub1.html">상담문의</a></h2>
+										<ul>
+											<li class="showBalloon" title="상담문의 안내"><a href="#">상담문의 안내</a></li>
+											<li class="showBalloon" title="일반 상담"><a href="#">일반 상담</a></li>
+											<li class="showBalloon" title="칭찬해요/속상해요"><a href="#">칭찬해요/속상해요</a></li>
+											<li class="showBalloon" title="챗봇/채팅상담"><a href="#">챗봇/채팅상담</a></li>
+										</ul>
+									</li>							
+									<li class=" threeInner showBalloon fl"  title="비위행위 신고센터"><h2><a href="sub1/sub1.html">비위행위 신고센터</a></h2>
+										<ul>
+											<li class="showBalloon" title="익명신고(헬프라인)"><a href="#">익명신고(헬프라인)</a></li>
+											<li class="showBalloon" title="부패공익신고"><a href="#">부패공익신고</a></li>
+											<li class="showBalloon" title="청탁금지위반신고"><a href="#">청탁금지위반신고</a></li>
+										</ul>
+									</li>							
+								</ul><!-- class="twoDepth" -->
+							</div>		
+						</li>
+						<li class="showBalloon" title="건강in"><a href="sub2/sub2.html"  tabindex="2"><span>건강in</span></a>						
+							<div class="twoInner1 db cf fl">
+								<ul class="twoDepth">
+									<li class="gnbVisual fl"><a href="sub1/sub1.html"><img src="images/gnb-visual.png" width="130" height="134" alt="gnb-visual"></a></li>
+									<li class=" threeInner showBalloon fl" title="나의건강관리"><h2><a href="sub1/sub1.html">나의건강관리</a></h2>
+										<ul>
+											<li class="showBalloon" title="건강검진 실시안내"><a href="#">건강검진 실시안내</a></li>
+											<li class="showBalloon" title="나의건강관리안내"><a href="#">나의건강관리안내</a></li>
+											<li class="showBalloon" title="건강검진로드맵" ><a href="#">건강검진로드맵</a></li>
+											<li class="showBalloon" title="진료 및 투약정보"><a href="#">진료 및 투약정보</a></li>
+											<li class="showBalloon" title="나의 의료이용 현황"><a href="#">나의 의료이용 현황</a></li>
+											<li class="showBalloon" title="자가건강기록"><a href="#">자가건강기록</a></li>
+										</ul>
+									</li>
+									<li class=" threeInner showBalloon fl" title="가족건강관리"><h2><a href="sub1/sub1.html">가족건강관리</a></h2>
+										<ul>
+											<li class="showBalloon" title="생활습관"><a href="#">생활습관</a></li>
+											<li class="showBalloon" title="건강예측"><a href="#">건강예측</a></li>
+											<li class="showBalloon" title="자격조회"><a href="#">자격조회</a></li>
+											<li class="showBalloon" title="건강다이어리"><a href="#">건강다이어리</a></li>
+											<li class="showBalloon" title="나의평생건강정보"><a href="#">나의평생건강정보</a></li>
+										</ul>
+									</li>							
+									<li class=" threeInner showBalloon fl" title="건강프로그램"><h2><a href="sub1/sub1.html">건강프로그램</a></h2>
+										<ul>
+											<li class="showBalloon" title="대사증후군 프로그램"><a href="#">대사증후군 프로그램</a></li>
+											<li class="showBalloon" title="금연프로그램"><a href="#">금연프로그램</a></li>
+											<li class="showBalloon" title="비만개선프로그램"><a href="#">비만개선프로그램</a></li>
+											<li class="showBalloon" title="합리적 의료이용지원"><a href="#">합리적 의료이용지원</a></li>
+											<li class="showBalloon" title="만성질환관리"><a href="#">만성질환관리</a></li>
+											<li class="showBalloon" title="건강상담/복약상담"><a href="#">건강상담/복약상담</a></li>
+										</ul>
+									</li>							
+									<li class=" threeInner showBalloon fl" title="건강생활"><h2><a href="sub1/sub1.html">건강생활</a></h2>
+										<ul>
+											<li class="showBalloon" title="자가건강진단"><a href="#">자가건강진단</a></li>
+											<li class="showBalloon" title="운동과생활"><a href="#">운동과생활</a></li>
+											<li class="showBalloon" title="임출산육아"><a href="#">임출산육아</a></li>
+											<li class="showBalloon" title="영양과건강"><a href="#">영양과건강</a></li>
+											<li class="showBalloon" title="청소년건강"><a href="#">청소년건강</a></li>
+											<li class="showBalloon" title="정신건강"><a href="#">정신건강</a></li>
+										</ul>
+									</li>							
+									<li class=" threeInner showBalloon fl" title="상담문의"><h2><a href="sub1/sub1.html">상담문의</a></h2>
+										<ul>
+											<li class="showBalloon" title="건강자료실"><a href="#">건강자료실</a></li>
+											<li class="showBalloon" title="의약품정보"><a href="#">의약품정보</a></li>
+											<li class="showBalloon" title="건강소식"><a href="#">건강소식</a></li>
+											<li class="showBalloon" title="건강동영상"><a href="#">건강동영상</a></li>
+											<li class="showBalloon" title="건강웹툰"><a href="#">건강웹툰</a></li>
+											<li class="showBalloon" title="건강전자도서"><a href="#">건강전자도서</a></li>
+										</ul>
+									</li>								
+								</ul><!-- class="twoDepth" -->
+							</div>		
+						</li>
+						<li class="showBalloon" title="정책센터"><a href="sub3/sub3.html" tabindex="3"><span>정책센터</span></a>						
+							<div class="twoInner1 db cf fl">
+								<ul class="twoDepth">
+									<li class="gnbVisual fl"><a href="sub1/sub1.html"><img src="images/gnb-visual.png" width="130" height="134" alt="gnbVisual"></a></li>
+									<li class=" threeInner showBalloon fl" title="국민건강보험"><h2><a href="sub1/sub1.html">국민건강보험</a></h2>
+										<ul>
+											<li class="showBalloon" title="건강보험의 이해"><a href="#">건강보험의 이해</a></li>
+											<li class="showBalloon" title="쉬워지는 국민건강보험"><a href="#">쉬워지는 국민건강보험</a></li>
+											<li class="showBalloon" title="자격"><a href="#">자격</a></li>
+											<li class="showBalloon" title="보험료"><a href="#">보험료</a></li>
+											<li class="showBalloon" title="건강검진"><a href="#">건강검진</a></li>
+											<li class="showBalloon" title="보험급여록"><a href="#">보험급여록</a></li>
+										</ul>
+									</li>
+									<li class=" threeInner showBalloon fl" title="정책홍보관"><h2><a href="sub1/sub1.html">정책홍보관</a></h2>
+										<ul>
+											<li class="showBalloon" title="건강보험보장성강화"><a href="#">건강보험보장성강화</a></li>
+											<li class="showBalloon" title="커뮤니티케어 안내"><a href="#">커뮤니티케어 안내</a></li>
+											<li class="showBalloon" title="건강보험료 개편"><a href="#">건강보험료 개편</a></li>
+										</ul>
+									</li>							
+									<li class=" threeInner showBalloon fl" title="사회통합징수" ><h2><a href="sub1/sub1.html">사회통합징수</a></h2>
+										<ul>
+											<li  class="showBalloon" title="통합징수제도안내"><a href="#">통합징수제도안내</a></li>
+											<li  class="showBalloon" title="사회보험료 고지안내"><a href="#">사회보험료 고지안내</a></li>
+										</ul>
+									</li>							
+									<li class=" threeInner showBalloon fl" title="권리구제제도"><h2><a href="sub1/sub1.html">권리구제제도</a></h2>
+										<ul>
+											<li class="showBalloon" title="위원장 인사말"><a href="#">위원장 인사말</a></li>
+											<li class="showBalloon" title="권리구제제도 안내"><a href="#">권리구제제도 안내</a></li>
+											<li class="showBalloon" title="신청방법"><a href="#">신청방법</a></li>
+											<li class="showBalloon" title="지식서비스"><a href="#">지식서비스</a></li>
+										</ul>
+									</li>								
+								</ul><!-- class="twoDepth" -->
+							</div>		
+						</li>
+						<li class="showBalloon" title="국민과함께"><a href="sub1/sub1.html" tabindex="4"><span>국민과함께</span></a>						
+							<div class="twoInner1 db cf fl">
+								<ul class="twoDepth">
+									<li class="gnbVisual fl"><a href="sub1/sub1.html"><img src="images/gnb-visual.png" width="130" height="134" alt="gnbVisual"></a></li>
+									<li class=" threeInner showBalloon fl" title="정보공개"><h2><a href="sub1/sub1.html">정보공개</a></h2>
+										<ul>
+											<li class="showBalloon" title="정보공개제도 안내"><a href="#">정보공개제도 안내</a></li>
+											<li class="showBalloon" title="사전정보공개"><a href="#">사전정보공개</a></li>
+											<li class="showBalloon" title="정보목록"><a href="#">정보목록</a></li>
+											<li class="showBalloon" title="정보공개청구"><a href="#">정보공개청구</a></li>
+											<li class="showBalloon" title="건강검진"><a href="#">건강검진</a></li>
+											<li class="showBalloon" title="공공데이터 제공"><a href="#">공공데이터 제공</a></li>
+										</ul>
+									</li>
+									<li class=" threeInner showBalloon fl" title="국민참여"><h2><a href="sub1/sub1.html">국민참여</a></h2>
+										<ul>
+											<li class="showBalloon" title="국민토론방"><a href="#">국민토론방</a></li>
+											<li class="showBalloon" title="국민제안"><a href="#">국민제안</a></li>
+											<li class="showBalloon" title="건강보험모니터단"><a href="#">건강보험모니터단</a></li>
+											<li class="showBalloon" title="시민참여혁신단"><a href="#">시민참여혁신단</a></li>
+											<li class="showBalloon" title="IT 기술제안"><a href="#">IT 기술제안</a></li>
+										</ul>
+									</li>							
+									<li class=" threeInner showBalloon fl" title="뉴스/소식"><h2><a href="sub1/sub1.html">뉴스/소식</a></h2>
+										<ul>
+											<li class="showBalloon" title="공지사항"><a href="#">공지사항</a></li>
+											<li class="showBalloon" title="포토뉴스"><a href="#">포토뉴스</a></li>
+											<li class="showBalloon" title="국민제안"><a href="#">보도자료</a></li>
+											<li class="showBalloon" title="담배소송"><a href="#">담배소송</a></li>
+											<li class="showBalloon" title="웹진"><a href="#">웹진</a></li>
+											<li class="showBalloon" title="입찰공고"><a href="#">입찰공고</a></li>
+										</ul>
+									</li>															
+								</ul><!-- class="twoDepth" -->
+							</div>		
+						</li>
+						<li class="showBalloon" title="공단요모조모" ><a href="sub2/sub2.html" tabindex="5"><span>공단요모조모</span></a>
+							<div class="twoInner1 db cf fl">
+								<ul class="twoDepth">
+									<li class="gnbVisual fl"><a href="sub1/sub1.html"><img src="images/gnb-visual.png" width="130" height="134" alt="gnbVisual"></a></li>
+									<li class=" threeInner showBalloon fl" title="공단소개"><h2><a href="sub1/sub1.html">공단소개</a></h2>
+										<ul>
+											<li class="showBalloon" title="이사장"><a href="#">이사장</a></li>
+											<li class="showBalloon" title="비전 및 핵심가치"><a href="#">비전 및 핵심가치</a></li>
+											<li class="showBalloon" title="경영전략체계도"><a href="#">경영전략체계도</a></li>
+											<li class="showBalloon" title="상징"><a href="#">상징</a></li>
+											<li class="showBalloon" title="이사회"><a href="#">이사회</a></li>
+										</ul>
+									</li>
+									<li class=" threeInner showBalloon fl" title="조직 및 인원"><h2><a href="sub1/sub1.html">조직 및 인원</a></h2>
+										<ul>
+											<li class="showBalloon" title="조직도"><a href="#">조직도</a></li>
+											<li class="showBalloon" title="찾아오시는 길"><a href="#">찾아오시는 길</a></li>
+											<li class="showBalloon" title="지역본부지사안내"><a href="#">지역본부지사안내</a></li>
+											<li class="showBalloon" title="건강보험연구원"><a href="#">건강보험연구원</a></li>
+											<li class="showBalloon" title="외국인민원센터"><a href="#">외국인민원센터</a></li>
+										</ul>
+									</li>							
+									<li class=" threeInner showBalloon fl" title="홍보센터"><h2><a href="sub1/sub1.html">홍보센터</a></h2>
+										<ul>
+											<li class="showBalloon" title="포스터/리플릿"><a href="#">포스터/리플릿</a></li>
+											<li class="showBalloon" title="홍보책자"><a href="#">홍보책자</a></li>
+											<li class="showBalloon" title="홍보동영상"><a href="#">홍보동영상</a></li>
+											<li class="showBalloon" title="공단 홍보관 견학"><a href="#">공단 홍보관 견학</a></li>
+											<li class="showBalloon" title="글로벌협력사업"><a href="#">글로벌협력사업</a></li>
+										</ul>
+									</li>															
+									<li class=" threeInner showBalloon fl" title="경영철학"><h2><a href="sub1/sub1.html">경영철학</a></h2>
+										<ul>
+											<li class="showBalloon" title="윤리/인권경영"><a href="#">윤리/인권경영</a></li>
+											<li class="showBalloon" title="ESG경영"><a href="#">ESG경영</a></li>
+											<li class="showBalloon" title="고객만족경영"><a href="#">고객만족경영</a></li>
+											<li class="showBalloon" title="안전보건경영"><a href="#">안전보건경영</a></li>
+										</ul>
+									</li>															
+									<li class=" threeInner showBalloon fl" title="사회공헌"><h2><a href="sub1/sub1.html">사회공헌</a></h2>
+										<ul>
+											<li class="showBalloon" title="건이강이봉사단"><a href="#">건이강이봉사단</a></li>
+											<li class="showBalloon" title="사회공헌백서"><a href="#">사회공헌백서</a></li>
+											<li class="showBalloon" title="의료봉사단"><a href="#">의료봉사단</a></li>
+											<li class="showBalloon" title="건강보험 작은공부방"><a href="#">건강보험 작은공부방</a></li>
+										</ul>
+									</li>															
+								</ul><!-- class="twoDepth" -->
+							</div>		
+						</li>
+						<li id="icoSearch"><a href="/" class="icoSearch"><img src="images/ico-search-navy.png" alt="icoSearch" width="26" height="26"></a></li>
+						<li id="icoMenu"><a href="/" class="icoMenu"><img src="images/ico-menu-navy.png" alt="icoMenu" width="26" height="26"></a></li>
+					</ul><!-- id="oneDepth" class="cf" -->
+				 </div><!-- id="lnbMenu" -->
+			</div><!-- id="lnb" -->
+		</div><!-- id="header" -->
+	</header>		
+<!-- #####SECTION##### -->	
+	<section>
+		<div id="section">
+			<div class="inner">
+				<div class="animationCanvas">
+					<span class="left"><a href="#" onclick="return false"><img src="images/left_arr.png" alt="이전"/></a></span>
+					<div class="sliderPanel">
+						<img src="images/mainbn_1.png" alt="6월 보험가입 이벤트" class="sliderImage"/>
+						<img src="images/mainbn_2.png" alt="노후·목돈·보장" class="sliderImage"/>
+						<img src="images/mainbn_3.png" alt="NEW연금보험" class="sliderImage"/>
+						<img src="images/mainbn_4.png" alt="퇴직연금 디폴드옵션" class="sliderImage"/>
+						<img src="images/mainbn_5.png" alt="보험스토리 웹소설" class="sliderImage"/>
+						<img src="images/mainbn_6.png" alt="국민건강보험 컨설턴트" class="sliderImage"/>
+						<img src="images/mainbn_7.png" alt="보이스피싱 신고센터" class="sliderImage"/>
+						<img src="images/mainbn_8.png" alt="국민건강보험 다이렉트" class="sliderImage"/>
+					</div><!-- class="slider_panel" -->
+					<span class="right"><a href="#" onclick="return false"><img src="images/right_arr.png" alt="다음"/></a></span>
+					<div class="sliderTextPanel">
+						<div class="sliderText">
+							<h2>국민건강보험<br>6월 보험가입 이벤트</h2>
+							<p>100% 원금보장 3총사로<br>손실 걱정없이 목돈준비 시작~</p>
+						</div>
+						<div class="sliderText">
+							<h2>노후·목돈·보장<br>준비하셨나요?</h2>
+							<p>노후준비, 목돈마련, 내보장을 채워줄<br>상품을 편안하게 문의하세요</p>
+						</div>
+						<div class="sliderText">
+							<h2>진짜가 나타났다!<br>진짜 NEW연금보험</h2>
+							<p>내 예상 연금액 확인하면?<br>스타벅스 여름음료 추첨증정</p>
+						</div>
+						<div class="sliderText">
+							<h2>퇴직연금 디폴드옵션<br>상품 사전지정 이벤트</h2>
+							<p>DC/IRP 가입자 모두 디폴트옵션 상품을<br></p>
+						</div>
+						<div class="sliderText">
+							<h2>보험스토리 웹소설<br>에세이 공모전 개최</h2>
+							<p>여러분이 상상하고 꿈꾸는 보험스토리를<br>들려주세요(~6월 16일 공모 마감)</p>
+						</div>
+						<div class="sliderText">
+							<h2>새로운 시작<br>국민건강보험 컨설턴트</h2>
+							<p>시작을 망설이고 있다면 국민건강보험의<br>체계적인 교육/육성/지원 프로그램을 만나보세요</p>
+						</div>
+						<div class="sliderText">
+							<h2>24시간 365일<br>보이스피싱 신고센터</h2>
+							<p>보이스피싱 의심 사례 발생 즉시 ARS로<br>신고 하고 추가 피해를 예방하세요!</p>
+						</div>
+						<div class="sliderText">
+							<h2>국민건강보험 다이렉트<br>팔로우 지금 시-작!</h2>
+							<p>문자/이메일 동의 시 <br>신세계상품권 추첨 증정</p>
+						</div>
+					</div><!-- class="slider_text_panel" -->
+					<div class="controlPanel">
+						<div class="controlButton"></div>
+						<div class="controlButton"></div>
+						<div class="controlButton"></div>
+						<div class="controlButton"></div>
+						<div class="controlButton"></div>
+						<div class="controlButton"></div>
+						<div class="controlButton"></div>
+					</div><!-- class="control_panel" -->
+				</div><!-- class="animation_canvas" -->
+			</div>
+			<div id="mainWrap">
+				<div id="mainSearch">
+					<div id="searchWrap" class="fl">
+						<div class="search">
+							<input type="text" name="inputSearch" id="inputSearch" class="guideText" value="검색어를 입력해 주세요">
+						</div>
+						<div class="searchButton"></div>
+						</div><!-- id="searchWrap" -->
+					<div id="bnTop" class="fr">
+						<div id="bnTopImg" class="onBanner"><a href="#"><img src="images/20221220_banner_pc01.png" width="410" height="118" alt="20221220_banner"/> </a></div>
+					<div class="ctrlBar">
+						<ul>
+							<li class="fl"><span><button class="lt" type="button" title="다음"></button></span></li>
+							<li class="fl"><span><button class="pause" type="button" title="정지"></button></span></li>
+							<li class="fl"><span><button class="rt"  type="button" title="다음"></button></span></li>
+						</ul>
+					</div><!-- class="ctrlBar" -->
+					</div><!-- id="bnTop" -->
+				</div><!-- id="mainSearch" -->
+				<div id="visitWrap">
+					<div id="visitMenu" class="tabSet">
+						<div id="visitMenuTitle" class="tabs">
+							<div class="fl visitorTitle" ><strong>방문자별 맞춤 메뉴</strong></div>
+							<div class="fl visitorToggle toggle">
+								<div class="tip toggle1 fl active"><a href="#visitMenuList1" class="on">개인</a></div>
+								<div class="tip toggle2 fl"><a href="#visitMenuList2">사업장</a></div>
+							</div><!-- class="fl visitorToggle -->
+							<div class="hoverButton plusButton fr">더보기+</div>
+						</div><!-- id="visitMenuTitle" -->
+						<div id="visitMenuList1" class="panel">
+							<h2 class="ti"><span>개인 맞춤 메뉴</span></h2>
+							<ul>
+								<li class="fl"><a href="#" class="rollover"><span><img src="images/ico-qualification-off.png" width="29" height="34" alt="qualification" /></span><p>자격득실<br>확인서 발급</p></a></li>
+								<li class="fl"><a href="#" class="rollover"><span><img src="images/ico-burden-off.png" width="34" height="32" alt="burden"/></span><p>보험료<br>납부확인서</p></a></li>									
+								<li class="fl"><a href="#" class="rollover"><span><img src="images/ico-refund-off.png" width="36" height="34" alt="refund" /></span><p>환급금<br>조회/신청</p></a></li>									
+								<li class="fl"><a href="#" class="rollover"><span><img src="images/ico-insurance-off.png" width="39" height="35" alt="insurance"/></span><p>보험료<br>조회/납부</p></a></li>									
+								<li class="fl"><a href="#" class="rollover"><span><img src="images/ico-calculation-off.png" width="30" height="35" alt="calculation"/></span><p>보험료<br>계산기</p></a></li>									
+								<li class="fl"><a href="#" class="rollover"><span><img src="images/ico-transfer-off.png" width="41" height="33" alt="transfer"/></span><p>재난적의료비<br>지원안내</p></a></li>									
+								<li class="fl"><a href="#" class="rollover"><span><img src="images/ico-checkups-off.png" width="34" height="34" alt="checkups"/></span><p>건강검진<br>대상조회</p></a></li>									
+								<li class="fl"><a href="#" class="rollover"><span><img src="images/ico-family-off.png" width="34" height="34" alt="family" /></span><p>영유아<br>검진결과조회</p></a></li>
+								<li class="fl"><a href="#" class="rollover"><span><img src="images/ico-company-inquiry-off.png" width="34" height="32" alt="family"/></span><p>서식<br>자료실</p></a></li>
+							</ul>
+						</div><!-- id="visitMenuList" -->
+						<div id="visitMenuList2" class="panel">
+							<h2 class="ti"><span>개인 맞춤 메뉴</span></h2>
+							<ul>
+								<li class="fl"><a href="#" class="rollover"><span><img src="images/ico-staff-search-off.png" width="29" height="34" alt="qualification" /></span><p>사업장<br>직원조회</p></a></li>
+								<li class="fl"><a href="#" class="rollover"><span><img src="images/ico-inform-off.png" width="34" height="32" alt="burden"/></span><p>사업장적용<br>통보서</p></a></li>									
+								<li class="fl"><a href="#" class="rollover"><span><img src="images/ico-insurance-off.png" width="36" height="34" alt="refund" /></span><p>보험료<br>고지내역조회</p></a></li>									
+								<li class="fl"><a href="#" class="rollover"><span><img src="images/ico-insurance-off.png" width="39" height="35" alt="insurance"/></span><p>보험료<br>고지납부현황</p></a></li>									
+								<li class="fl"><a href="#" class="rollover"><span><img src="images/ico-calculation-off.png" width="30" height="35" alt="calculation"/></span><p>4대보험<br>완납증명서</p></a></li>									
+								<li class="fl"><a href="#" class="rollover"><span><img src="images/ico-transfer-off.png" width="41" height="33" alt="transfer"/></span><p>건강보험<br>납부확인서</p></a></li>									
+								<li class="fl"><a href="#" class="rollover"><span><img src="images/ico-checkups-off.png" width="34" height="34" alt="checkups"/></span><p>연금<br>납부확인서</p></a></li>									
+								<li class="fl"><a href="#" class="rollover"><span><img src="images/ico-family-off.png" width="34" height="34" alt="family" /></span><p>증명서발급<br>사실확인</p></a></li>
+								<li class="fl"><a href="#" class="rollover"><span><img src="images/ico-company-inquiry-off.png" width="34" height="32" alt="family"/></span><p>보험료<br>산출내역</p></a></li>
+							</ul>
+						</div><!-- id="visitMenuList" -->
+					</div><!-- id="visitMenu" -->
+				</div><!-- id="visitWrap" -->
+				<div id="bnWrap">						
+					<div class="ctrlBar">
+						<ul>
+							<li class="fl"><span><button class="lt" type="button" title="다음"></button></span></li>
+							<li class="fl"><span><button class="pause" type="button" title="정지"></button></span></li>
+							<li class="fl"><span><button class="rt"  type="button" title="다음"></button></span></li>
+						</ul>
+					</div><!-- class="ctrlBar" -->
+					<div id="bnMain">
+						<div id="bnMainContent">
+								<div id="countwrap">
+									<h2 id="countment">새해 까지</h2>
+									<div class="counter">
+										<ul class="cf">
+											<li id="countD" class="firstli fl">
+												<img src="images/num10.gif" alt="day100자리" width="40" id="day100" class="fl" />
+												<img src="images/num10.gif" alt="day10자리" width="40" id="day10" class="fl" />
+												<img src="images/num10.gif" alt="day1자리" width="40" id="day1" class="fl" />
+												<p>days</p>
+											</li>
+											<li class="fl">
+												<img src="images/colon.png" width="40" id="middle1" class="fl" alt="colon" />
+											</li>
+											<li id="counterH" class="fl">
+												<img src="images/num10.gif" width="40" id="hour10" class="fl" alt="시간10의자리" />
+												<img src="images/num10.gif" width="40" id="hour1" class="fl" alt="시간1의자리" />
+												<p>hours</p>
+											</li>
+											<li class="fl">
+												<img src="images/colon.png" width="40" id="middle2" class="fl" alt="colon"/>
+											</li>
+											<li id="counterM" class="fl">
+												<img src="images/num10.gif" width="40" id="min10" class="fl" alt="분10의자리" />
+												<img src="images/num10.gif" width="40" id="min1" class="fl" alt="분1의자리" />
+												<p>minutes</p>
+											</li>
+											<li class="fl">
+												<img src="images/colon.png" width="40" id="middle3" class="fl" alt="colon" />
+											</li>
+											<li id="counterS" class="fl">
+												<img src="images/num10.gif" width="40" id="sec10" class="fl" alt="분10의자리" />
+												<img src="images/num10.gif" width="40" id="sec1" class="fl" alt="분1의자리" />
+												<p>seconds</p>
+											</li>
+										</ul>
+									</div><!-- class="counter" -->
+								</div><!-- id="countwrap" -->
+							<ul>	
+								<li class="fl">
+									<a href="#"><span class="text">공단홈페이지 방문을 환영합니다</span></a>
+								</li>							
+							</ul>
+						</div><!-- id="bnMainContent" -->
+					</div><!-- id="bnMain" -->
+				</div><!-- id="bnWrap" -->
+			</div><!-- id="mainWrap" -->
+		</div><!-- id="section" -->
+	</section>
+<!-- #####aside##### -->	
+	<aside>
+		<div id="widgetWrap">
+			<div id="hwellNews">
+				<div id="newsArea" class="fl">
+					<ul>
+						<li class="newsArea1"><a href="#">공지사항</a></li>
+						<li class="newsArea2"><a href="#">채용공고</a></li>
+						<li class="newsArea3"><a href="#">보도자료</a></li>
+						<li class="newsArea4"><a href="#">입찰공고</a></li>
+						<li class="newsArea5"><a href="#">경영공시</a></li>
+					</ul>
+				</div><!-- id="newsArea fl" -->
+				<div id="healthArea" class="fl">
+					<p class="title">건강정보</p>
+					<ul>
+						<li class="healthArea1"><a href="#">가까운 병의원 찾기</a></li>
+						<li class="healthArea2"><a href="#">검진기관 찾기</a></li>
+						<li class="healthArea3"><a href="#">건강뉴스</a></li>
+						<li class="healthArea4"><a href="#">건강웹툰</a></li>
+					</ul>
+				</div><!-- id="healthArea fl -->
+				<div id="quickArea" class="fl">
+					<ul>
+						<li class="quickArea1"><a href="#">정보공개청구</a></li>
+						<li class="quickArea2"><a href="#">사전정보목록</a></li>
+						<li class="quickArea3"><a href="#">보장성강화</a></li>
+						<li class="quickArea4"><a href="#"><p class="dl">건강보험연구원</p>
+						<p class="dd">Health Insurance Research<br>Institute(HIRI)</p></a></li>
+					</ul>
+				</div><!-- id="quickArea fl" -->
+			</div><!-- id="hwellNews" -->
+			<div id="hiWellService" >
+				<div id="policyArea" class="fl">
+					<ul>
+						<li class="title"><a href="#">알아두면 건강해지는 건강보험공단<br><strong class="strong">주요정책</strong></a>
+						</li>
+						<li class="list"><a href="#">소중한 나의 가족! 건강관리 쉽게 하는 방법은 없을까요?</a>
+							<ul>
+								<li><span>가족건강관리</span><br>서비스를 확인해 보세요!</li>
+							</ul>
+						</li>	
+						<li class="list"><a href="#">피부양자 자격 취득·상실 기준이 어떻게 될까요?</a>
+							<ul>
+								<li><span>피부양자 인정기준을</span><br>도표로 확인해보세요</li>
+							</ul>
+						</li>
+						<li class="list"><a href="#">공단은 지역사회에서 어떤 일을 할까요?</a>
+							<ul>
+								<li><span>지역사회에서</span><br>공단의 역할을 확인해보세요</li>
+							</ul>
+						</li>
+						<li class="list"><a href="#">내 건강보험료는 어떻게 책정되었을까요?</a>
+							<ul>
+								<li><span>보험료 부과 및 산정</span><br>기준을 확인해보세요!</li>
+							</ul>	
+						</li>
+					</ul>
+				</div><!-- id="policyArea fl" -->
+				<div id="bnSub1" class="fr">
+					<div class="title">
+						<div class="name fl">
+							<p>Weather</p>
+						</div>
+						<div class="cicon fl"></div>
+					</div><!-- class="title" -->
+					<div class="content">
+						<div class="cweather"></div>
+						<div class="ctemp">현재 온도 : </div>
+						<div class="clowtemp">최저 온도 : </div>
+						<div class="chightemp">최고 온도 : </div>
+					</div>
+				</div><!-- id="bnSub1 fr" -->
+			</div>	<!--  id="hiWellService" -->
+			<div id="hiWellAbout">
+				<div class="fl">
+					<div id="stateArea"  class="fl">
+						<div class="eventRight fl"></div>
+						<div class="eventLeft fl"></div>
+					</div><!-- id="stateArea fl" -->
+				</div>
+				<div class="fl">
+					<div id="linkArea"  class="fl">				
+						<div class="eventRight fl"></div>
+						<div class="eventLeft fl"></div>
+					</div><!-- id="linkArea fl" -->
+				</div>
+				<div class="fl">
+					<div id="bnSub2"  class="fl">
+						<div class="eventRight fl"></div>
+						<div class="eventLeft fl"></div>
+					</div><!-- id="bnArea2 fl" -->
+				</div>
+			</div><!-- id="hiWellAbout" -->
+			<div id="hiwellInfo">
+				<div id="info" class="fl">id="info"</div><!-- id="info" -->
+				<div id="letter" class="fl">id="letter"</div><!-- id="letter" -->
+				<div id="app" class="fl">id="app"</div><!-- id="app" -->
+			</div>
+		</div><!-- id="widgetWrap" -->
+	</aside>
+<!-- #####footer##### -->						
+	<footer>	
+		<p id="pop_wrap">
+			<img src="images/popup.png" alt="팝업광고" usemap="#pop" />
+			<map name="pop" id="pop">
+				<area class="a" shape="rect" coords= "622,776,711,830" href="하루동안 창 닫기" />
+				<area class="b" shape="rect" coords= "0,777,242,830" href="창닫기" />
+			</map>
+		</p>		
+		<div id="footer" class="cf">
+			<ul>
+				<li><a href="#">이용약관</a></li>
+				<li><a href="#">영상정보처리기기</a></li>
+				<li><a href="#">운영방침</a></li>
+				<li><a href="#" class="bold">개인정보처리방침</a></li>
+				<li><a href="#">내부관련사이트 </a></li>
+				<li class="last"><a href="#">제휴문의</a></li>
+			</ul>
+			<span><img src="images/html5Gray.png" alt="html5Gray" width="80" height="15"></span>
+			<span><img src="images/cssBlue.png" alt="cssBlue" width="80" height="15"></span>
+			<div id="relSiteWrap">
+				<form action="#" method="get" name="relF">
+					<fieldset>
+						<legend>관련 사이트 이동</legend>
+						<select name="relSelect">
+							<option value="https://www.nps.or.kr/">국민연금공단</option>
+							<option value="https://www.comwel.or.kr/">근로복지공단</option>
+							<option value="https://www.mohw.go.kr/">보건복지부</option>
+							<option value="https://www.acrc.go.kr/">국민권익위원회</option>
+							<option value="https://www.gov.kr/">정부24</option>
+							<option value="https://total.comwel.or.kr/">고용보험산재 토탈서비스</option>
+						</select>
+						<input type="button" name="relSite" id="relSiteButton" value="이동" />
+						<input type="image" src="img/rel_site_btn.gif" alt="관련 사이트 이동" />
+					</fieldset>
+				</form>
+			</div><!-- id="relSite_wrap" -->
+			<p>Copyright @ 2020 by National Health Insurance Service. All rights reserved.</p>
+		</div><!-- footer end -->
+	</footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
