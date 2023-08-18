@@ -9,7 +9,6 @@ import org.apache.tomcat.util.http.fileupload.impl.FileSizeLimitExceededExceptio
 
 //파일 복사 및 이동
 public class file12 {
-
 	public static void main(String[] args) {
 		try {
 			data10 d = new data10();

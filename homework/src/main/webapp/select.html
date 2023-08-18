@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<input type="hidden" id="money" value="10000">
+수량 : <select id="ea" onchange="bbb(this.value)" style="width:150px; background: white;">
+		<option value="1">1</option>
+		<option value="2">2</option>
+		<option value="3">3</option>
+		<option value="4">4</option>
+		<option value="5">5</option>	
+</select><br>
+상품금액 : 10000원<br>
+<spans style="float:left;">최종금액 :&nbsp; </spans><span id="total" style="float:left;">10000</span>원<span></span>
+<script>
+	function bbb(z){
+		var aa = document.getElementById("money").value;//1개당 실제가격
+		var bb = document.getElementById("total");
+		var sum = Number(aa) * Number(z); //실제가격 *수량
+		bb.innerText = sum; //해당 태그 안에 문자로 출력
+	}
+
+</script>
+</body>
+</html>
