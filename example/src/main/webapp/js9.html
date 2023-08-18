@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>랜덤(기초)</title>
+<!--
+	Math.ceil
+	Math.floor
+	Math.round
+-->
+</head>
+<body>
+암호코드 (4자리): <input type="text" id="num">	
+</body>
+<script>
+	//var no =Math.ceil(Math.random() * 10); //1~10 소수점 무조건 올림
+	//var no =Math.floor(Math.random() * 10); // 0~9 소수점 무조건 절삭
+	//var no =Math.round(Math.random() * 10); // 0.5이상이면 반올림
+	var f;
+	var sc = "";
+	for(f=1; f<=4; f++){
+		sc+= Math.floor(Math.random() * 10);
+	}
+	document.getElementById("num").value =sc;
+	console.log(no);
+</script>
+</html>

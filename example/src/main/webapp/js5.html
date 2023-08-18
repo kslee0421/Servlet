@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자바스크립트 - 버블링 + 캡쳐링 함수 기초 radio</title>
+</head>
+<form>
+<input type="checkbox"id="all" onclick="agree(this.checked)">전체동의<br>
+이메일 약관 <input type="radio" name="a" id="a1" onclick="ok1(this.name,0)"> 동의함 <input type="radio" name="a" id="aa1" onclick="ok1(this.name,1)" checked>동의안함<br>
+서비스 약관 <input type="radio" name="b" id="a2" onclick="ok1(this.name,0)"> 동의함 <input type="radio" name="b" id="aa2" onclick="ok1()" checked>동의안함<br>
+개인정보서비스 약관 <input type="radio" name="c" id="a3" onclick="ok1(this.name,0)"> 동의함 <input type="radio" name="c" id="aa3" onclick="ok1()" checked>동의안함<br>
+</body>
+<script>
+	function ok1(name,node){//해당 오브젝트의 네임값과 노드번호 (배열)
+		//console.log(name);
+		var nm =document.getElementById(name); //name으로 확인 
+		if(node ==1){ //동의안함을 무조건 클릭시 전체 동의 해제
+			document.getElementById("all").checked =false;
+		}
+		else{  //각각의 서비스 약관에 대한 동의함 클릭시 반복문으로 모두 동의함이 되었는지 확인
+			var w =1;
+			var count = 0;
+			while(w<=3){
+				if(document.getElementById("a"+w).checked ==true){
+					count++;
+				}
+				w++;
+			}
+			if(count ==3){ //모두 동의함일경우 전체 동의 부분에 쳌, 되도록 함 
+				document.getElementById("all").checked =true;				
+			}
+		}
+		//console.log(nm);
+		//console.log(nm[node]);
+		nm[node].checked =true;
+		
+	}
+	function agree(e){
+		var w =1 ;
+		do{
+			if(e ==true){
+			document.getElementById("a"+w).Checked= e;
+			}
+			else{
+			document.getElementById("aa"+w).Checked= true;
+			}
+			w++;
+		} 
+		while(w <=3);
+		
+		if(e ==true){ //하나라도 체크 아웃 되었을 경우 
+			all.checked = false; //전체 체크가 해제
+		}	
+		else{
+			all.checked = true; //전체 체크가 선택
+		}		
+		while(w <=3){
+		document.getElementById("a"+w).checked =e;
+		w++;			
+		}
+		
+		
+	}
+</script>
+</html>

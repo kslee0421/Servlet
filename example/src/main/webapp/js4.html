@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자바스크립트 - 버블링 + 캡쳐링 함수 기초 응용편 (장바구니)</title>
+</head>
+<body>
+<input type ="checkbox" id="all" onclick="all_ck()">상품 전체 선택<br>
+<input type ="checkbox" value="5000" id="a1" onclick="basket(this.value,this.checked)">포도 : 5000원<br>
+<input type ="checkbox" value="1000" id="a2" onclick="basket(this.value,this.checked)">사과 : 1000원<br>
+<input type ="checkbox" value="8000" id="a3" onclick="basket(this.value,this.checked)">멜론 : 8000원<br>
+<input type ="checkbox" value="1200" id="a4" onclick="basket(this.value,this.checked)">체리 : 1200원<br>
+<div style="float:left;">결제하실 금액 : </div><div id="total" style="float:left;">0</div>
+
+<script>
+	//전역변수 (최종 결제 변수)
+	var totalsum = 0;
+	//전체선택 함수
+	function all_ck(e){
+		totalsum = 0; //전체 체크시 전역변수 값을 다시 초기화를 진행
+		var w = 1;
+		while(w <=4){
+			document.getElementById("a"+w).checked =e;
+			if(e ==true){
+				totalsum = totalsum + Number(document.getElementById("a"+w).value);
+			}
+			else{
+				if(totalsum!=0){ //-값이 나오는 상황이 발생 0값이 아닐경우 해당 수식구가 작동되지 않도록 조건을 사용
+				totalsum = totalsum - Number(document.getElementById("a"+w).value);
+				}
+			}
+			w++;
+		}
+				document.getElementById("total").innerText =totalsum;  //최종결제금액 반영
+	}
+	function basket(v,use){ //각각의 상품 체크 유/무 따라 합계 급액이 변동되도록 하는 함수
+		if(use==true){
+			totalsum += Number(v);			
+		}
+		else{
+			 totalsum -= Number(v);
+		}
+		//console.log(totalsum);
+		document.getElementById("total").innerText =totalsum; //최종결제 금액 반영
+		
+		var aa = document.getElementById("all"); //전체선택 오브젝트
+		var check =true; //체크 핸들링을 위한 변수
+		do{
+			//해당 아이디별로 체크 중 해제 되었을 조건일 경우 
+			if(document.getElementById("a"+w).checked==false){
+				check =false;
+			}
+			w++;
+		}while(w <=4);
+		if(check==false){ //하나라도 체크 아웃 되었을 경우 
+			aa.checked = false; //전체 체크가 해제
+		}
+		else{
+			aa.checked = true; //전체 체크가 선택
+		}
+	}
+		
+</script>
+</body>
+</html>

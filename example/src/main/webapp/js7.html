@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>URI 활용법 - 데이터 받는 역할</title>
+<link rel ="shortcut icon" href="#">
+</head>
+<body>
+검색어 : <div id="search"></div><br>
+카테고리: <div id="cate"></div><br>
+</body>
+<script> 
+	/* //데이터 값이 1개 일 때
+	var uri = window.location.search; //파라미터 (URI)를 가져오는 역할 
+	var data = uri.split("?search="); //split 단어를 기준으로 배열화 시키는 함수
+	var v = decodeURI(data[1]); //한글 또는 특수문자 깨짐을 복원하는 함수 
+	//console.log(data[1]);
+	console.log(v);
+	*/
+	//데이터 값이 2개 이상일때
+	var uri= decodeURI(window.location.search);
+	var data = uri.split("&cate=");
+	var data2 = data[0].split("?search=");
+	//console.log(data);
+	document.getElementById("search").innerHTML =data2[1];
+	document.getElementById("cate").innerHTML =data[1];
+</script>
+</html>

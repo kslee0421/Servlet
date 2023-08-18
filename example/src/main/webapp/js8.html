@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<!--
+A파트 
+고객명, 아이디는 모두 필수로 입력되어야 합니다.
+단, 개인정보 3자에 제공은 선택입니다.
+
+이벤트 참여버튼 클릭시 B파트 사용자에게 URI로 전달 합니다.
+
+-->
+<head>
+<meta charset="UTF-8">
+<title>URI + SPLIT A 파트</title>
+<link rel ="shortcut icon" href="#">
+</head>
+<body>
+<!--<form id="f" method="get" action="http://192.168.110.216:8081/example/js9.html" onsubmit="return abc()"-->
+<form id="f" method="get" action="./js9.html" onsubmit="return abc()">
+고객명 <input type="text" id="user" name="user"><br>
+아이디 <input type ="text" id="id" name="id"><br>
+<input type="checkbox" id="check" name="check" value="Y" >개인정보 3자에 제공 (선택)<br> 
+<button>이벤트 참여</button>
+</form>
+</body>
+<script>
+	var uri= decodeURI(window.location.search);  //한글이 안들어간 내용이면 decode안해도됨
+	var data1 = uri.split("&check=");
+	if(data1.length >1){
+		document.getElementById("check").checked =true;
+	}
+	var data2 = data1[0].split("&uid=");
+	document.getElementById("uid").innerText = data2[1];
+	
+	var data3 = data2[0].split("?uname=");
+	document.getElementById("uname").innerText = data3[1];
+</script>
+</html>
+
+

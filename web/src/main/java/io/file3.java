@@ -4,7 +4,7 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class file3 {
-//IOException + Exception + finally (d예외처리 후 다시 해당 프로세서 실행 but  강제료종료)
+//IOException + Exception + finally (예외처리 후 다시 해당 프로세서 실행 but  강제료종료)
 	public static void main(String[] args) {
 		try {
 			data2 dt = new data2();

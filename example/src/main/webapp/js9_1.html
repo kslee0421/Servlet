@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+고객명 : <div id="user" ></div><br>
+아이디: <div id="id"></div><br>
+<input type="checkbox"  id="check" name="check" disabled>개인정보 3자에 제공<br> 
+</body>
+<script>
+	var uri= decodeURI(window.location.search);
+	var ea = uri.split("=");
+	//console.log(data.length);
+	if(ea.length==2){
+		var data2 = uri.split("&id=");
+		var data3 = data2[0].split("?user=");	
+		//console.log(data2[0]);
+		document.getElementById("user").innerText =data3[1];
+		document.getElementById("id").innerText =data2[1];
+	}
+	else{
+		var data = uri.split("&check=");
+		var data2 = data[0].split("&id=");
+		var data3 = data2[0].split("?user=");
+		document.getElementById("id").innerText =data2[1];
+		document.getElementById("user").innerText =data3[1];
+		document.getElementById("check").checked =data[1];	
+	}
+	//var data2 = data[0].split("?user=");
+	//console.log(data.length);
+	
+</script>
+</html>
