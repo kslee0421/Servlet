@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>onclick~onchange, submit, click</title>
+<script>
+	function zzz(n){
+		console.log(n);
+	}
+</script>
+</head>
+<select  onchange="zzz(this.value)">
+	<option value="1">1</option>
+	<option value="2">2</option>
+	<option value="3">3</option>
+	<option value="4">4</option>
+</select>
+<!--submit은 form태그를 핸들링 한다 자체적으로 onclick을 써서 핸들링하지 않는다
+     button은 자바스크립트로 핸들링 
+     submit은 form안에 한번만 
+     button은 form안이나 밖에 여러번 가능 -->
+<body>
+<form id ="f" method="post" action="http://naver.com" onsubmit="return abc()">
+	<input type="text">
+	
+<input type="submit" value="클릭" onclick="abc()"> <!--form에 action을 작동시킴 onclick이 필요하지 않다-->
+</form>
+<input type="button" value="클릭" onclic="bbb()">
+<script>
+	function bbb(){
+		f.submit();
+	}
+	function abc(){
+		alert("test");
+		return false;
+	}
+	
+</script>
+</body>
+</html>

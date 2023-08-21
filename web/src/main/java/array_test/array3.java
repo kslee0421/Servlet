@@ -37,6 +37,7 @@ public class array3 {
 		int count2 =0;
 		for(int n : no2) {
 		 	if(n % 2==0){
+		 		
 		 		count1++;
 		 		//System.out.println(n);
 			}else {
