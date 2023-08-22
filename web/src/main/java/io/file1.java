@@ -54,7 +54,7 @@ class abc{
 	 */
 	public void aaa() throws Exception{
 		FileReader fr = new FileReader("E:\\project\\web\\src\\main\\webapp\\data.txt");
-		//System.out.println(fr.read());
+		System.out.println(fr.read());
 		//read() : 데이터 크기를 읽어 들이는 메소드 
 		// -1 : 파일이 아무것도 없는 상태, -1외에는 파일이 있는 상태. 
 	}

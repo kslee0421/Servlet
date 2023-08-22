@@ -36,6 +36,7 @@ class cccc {
 		while ((line = bf.readLine())!=null) {
 			al.add(line);
 		}	
+		System.out.println(al);
 		for (int i =0; i< al.size(); i++) {
 			if(i%2!=0) {
 				String data =al.get(i);

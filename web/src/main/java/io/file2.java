@@ -25,7 +25,7 @@ class data1{
 		while(true) {   //무한 루프
 			int m =fr.read();
 			System.out.println(m);
-			System.out.println((char)m); //byte를 문자화해서 출력
+			//System.out.println((char)m); //byte를 문자화해서 출력
 			//1024byte == 1kbyte
 			//1024kb = 1mb
 			if(m== -1) {
