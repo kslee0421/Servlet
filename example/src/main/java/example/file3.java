@@ -49,17 +49,6 @@ class tel {
 			//System.out.println(Arrays.toString(data2));
 			this.fw.write(data2[0]+"("+data2[1]+")"+"\n");
 		}
-		
-
-//		BufferedReader bf = new BufferedReader(this.fr2);
-//		System.out.println(bf.readLine());
-//		
-//		ArrayList<String> al = new ArrayList<String>();
-//		String line =""; 
-//		while ((line = bf.readLine())!=null) {
-//			al.add(line);
-//		}
-//		System.out.println(al);	
 		this.fw.close();
 		this.br.close();
 		this.fr.close();
