@@ -58,5 +58,14 @@
   	<servlet-name>login</servlet-name>
   	<url-pattern>/shop/loginok.do</url-pattern>    
   </servlet-mapping>
+  <!--게시판 글쓰기-->
+    <servlet>
+  	<servlet-name>board</servlet-name>
+  	<servlet-class>web.board</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>board</servlet-name>
+  	<url-pattern>/board/boardok.do</url-pattern>    
+  </servlet-mapping>
 
 </web-app>

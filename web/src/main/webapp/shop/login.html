@@ -6,15 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>로그인</title>
     <link rel="stylesheet" type="text/css" href="./login.css">
-    <script src="./join.js"></script>
+    <!--defer : HTML 코드를 모두 로드 한 후 자바스크립트를 실행 시킴 (지연)-->
+    <script src="./join.js?v=1" defer></script>
 </head>
 <body>
     <div id="con">
     <div id="login">
     <div id="login_form"><!--로그인 폼-->
-    <form method="post" id="f" action="./loginok.do"  enctype="application/x-www-form-urlencoded" onsubmit="return login()">
+    <form method="post" id="f" action="./loginok.do" enctype="application/x-www-form-urlencoded" enctype="application/x-www-form-urlencoded" onsubmit="return login()">
         <h3 class="login" style="letter-spacing:-1px;">Sign in to Web</h3>
-
         <p>
             <input type="button" value="Sign in with Google" class="btn" style="background-color:#217Af0">
         </p>
@@ -23,11 +23,11 @@
         <label>
         <!-- <span>ID</span> -->
         <p style="text-align: left; font-size:12px; color:#666">Username</p>
-        <input type="text"  name="uid" placeholder="아이디를 입력" class="size">
+        <input type="text"  name="uid" id="uid" placeholder="아이디를 입력" class="size">
         <!-- <input type="submit" value="확인"> -->
         <p style="text-align: left;">
 			<label>
-				<input type="checkbox" value="save">아이디 저장
+				<input type="checkbox" id="saveid" value="save" onclick="id_save()">아이디 저장
 			</label>
 			
 		</p>
@@ -36,7 +36,7 @@
         <label>
         <!-- <span>PW</span> -->
         <p style="text-align: left; font-size:12px; color:#666">Password </p>
-        <input type="password"  name="upw" placeholder="비밀번호를 입력" class="size">
+        <input type="password"  name="upw" id="upw" placeholder="비밀번호를 입력" class="size">
         <!-- <input type="submit" value="확인"> -->
         </label>
 
@@ -53,6 +53,7 @@
     </div>
     <div>
     </div><!--con-->
+
 
 </body>
 </html>

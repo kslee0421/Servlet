@@ -24,7 +24,6 @@ public class join extends HttpServlet {
 		request.setCharacterEncoding("utf-8");
 		response.setContentType("text/html;charset=utf-8");
 		String sid = request.getParameter("sid").intern();
-		
 		String sname = request.getParameter("sname").intern();
 		String spw = request.getParameter("spw").intern();
 		String scom = request.getParameter("scom").intern();

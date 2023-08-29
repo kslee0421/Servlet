@@ -18,6 +18,11 @@ import org.eclipse.jdt.internal.compiler.ast.ThisReference;
 7*3 =21
  
  */
+//System.out.println("단어를 입력하세요");
+//Scanner sc = new Scanner(System.in);
+//String word = sc.nextLine();
+//int ea = word.length();
+//System.out.println(ea);
 public class java8 {
 	static String a =null;
 	public static void main(String[] args) {
