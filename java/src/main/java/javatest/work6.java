@@ -1,4 +1,7 @@
 package javatest;
+
+import java.util.*;
+
 /*
  숙제.
  추상클래스 + 중첩 클래스를 이용하여  프로세서를 제작합니다.
@@ -32,11 +35,44 @@ package javatest;
   
  */
 public class work6 {
-
 	public static void main(String[] args) {
-
+		Scanner sc = null;
+		sc = new Scanner(System.in);
+		System.out.println("회원명를 입력해 주세요");
+		String u_name = sc.nextLine().intern();
+		son s = new son();
+		s.f_method(u_name);
 	}
 
+}
+
+abstract class father{
+	public abstract void f_method(String u_name);
+	String user[][]=null;
+}
+
+class son extends father{
+	
+
+	@Override
+	public void f_method(String u_name) {
+		this.user = new String[][] {
+			{"홍길동","이순신","유관순","강감찬","장보고"},
+			{"일반회원","일반회원","일반회원","실버회원","실버회원"}
+		};
+		int i = 0;
+		int count =0;
+		for(i=0; i<user[0].length; i++){
+			if(u_name==user[0][i]) {
+				count++;
+				System.out.println(user[0][i] + "은(는)" + user[1][i] + "입니다." );
+				break;
+			}
+		}
+		if(count!=1) {
+			System.out.println("해당 사용자는 비회원입니다.");
+		}
+	}
 }
 
 

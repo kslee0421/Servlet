@@ -69,7 +69,7 @@ public class board extends HttpServlet {
 				this.ps.setString(1, btitle);
 				this.ps.setString(2, bname);
 				this.ps.setString(3, bpass);
-				this.ps.setString(4, bfile);
+				this.ps.setString(4, filenm);
 				this.ps.setString(5, bcon);
 				int call = this.ps.executeUpdate();
 				String msg =  "";
