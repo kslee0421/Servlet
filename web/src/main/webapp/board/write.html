@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <head>
     <title>게시판</title>
@@ -19,7 +18,7 @@
 				height:500px;
 		}
     </style>
-    <script src="./board.js" defer></script>
+    <script src="./board.js?v=1" defer></script>
     <script src="./ckeditor/ckeditor.js"></script>
 </head>
 <body>
@@ -54,7 +53,7 @@
     <div class="row">
         <div class="col-sm-12">
             <h2>글쓰기</h2>
-            <form th:action method="post" action="./boardok.do" id="f" enctype="multipart/form-data" enctype="application/x-www-form-urlencoded">
+            <form th:action method="post" action="./boardok.do" id="f" enctype="multipart/form-data"><!--파일 타입-->
                 <div class="form-group">
                     <input type="text" class="form-control" placeholder="제목을 입력하세요" name="btitle">
                 </div>
@@ -65,7 +64,7 @@
                     <input type="password" class="form-control" placeholder="패스워드" name="bpass">
                 </div>
                 <div class="form-group">
-                    <input type="file" class="form-control-file border" name="file">
+                    <input type="file" class="form-control-file border" name="file"> <!--file 네임과 파일 타입 -->
                 </div>
                 <div class="form-group">
                     <textarea name="texts"></textarea>
@@ -79,5 +78,6 @@
 <!--cheditor 장착 ckeditor5(TS) ckeditor4(JS)-->
 <script>
 	CKEDITOR.replace("texts");
+	CKEDITOR.config.resize_enabled = false;
 </script>
 </html>

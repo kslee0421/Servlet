@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>모바일 전용 웹페이지</title>
+</head>
+<body>
+[💖모바일 전용 input 형태💖]<br>
+입력1 text<input type="text"><br><!--일반 입력 (P,M)-->
+입력2 number<input type="number"><br><!--숫자만 입력(M)-->
+입력3 color<input type="color"><br> <!--색상선택 (P,M)-->
+입력4 tel<input type="tel"><br> <!--전화번호(M)-->
+입력5 time<input type="time"><br> <!--시간선택(P,M)-->
+입력6 date<input type="date"><br> <!--날짜선택(P,M)-->
+입력7 datetime-local<input type="datetime-local"><br> <!--날짜,시간 동시에 입력(P,M)-->
+입력8 week<input type="week"><br> <!--주차 (P,M) 안드로이드전용 ios는 작동 불능-->
+입력9 email<input type="email"><br> <!--이메일 (M)-->
+입력10 range<br><!--수량, 크기 범위 선택(P,M)-->
+<form oninput="sound2.value=parseInt(sound.value)">
+1<input type="range" id="sound" min="1" max="10" >10<br> <!--이메일 (M)-->
+<output for="sound" name="sound2"></output>
+</form>
+<br><br>
+입력11 url<input type="url"><br><!--도메인, 블로그등 웹 경로 (M)-->
+<a href="tel:027222111">학원 고객센터 : 027222111</a> <br>
+👍 좋아요 1
+<br><br>
+입력12 <input type="text" name="product" list="subject">
+<datalist id="subject">
+	<option value="HTML">HTML</option>
+	<option value="HTML">JSP</option>
+	<option value="HTML">JS</option>
+	<option value="HTML">JAVA</option>
+			
+</datalist>
+</body>
+</html>

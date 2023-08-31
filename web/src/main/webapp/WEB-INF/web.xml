@@ -23,7 +23,7 @@
   	<url-pattern>/calok.do</url-pattern>
   </servlet-mapping>
   
-   <servlet>
+  <servlet>
   	<servlet-name>lotto_page</servlet-name>
   	<servlet-class>web.lottoController</servlet-class> <!--package.class 이름-->
   </servlet>
@@ -67,5 +67,17 @@
   	<servlet-name>board</servlet-name>
   	<url-pattern>/board/boardok.do</url-pattern>    
   </servlet-mapping>
-
+  
+  <servlet>
+  	<servlet-name>mlogin</servlet-name>
+  	<servlet-class>web.mlogin</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>mlogin</servlet-name>
+  	<url-pattern>/m/mloginok.do</url-pattern>    
+  </servlet-mapping>  
+  
+	<session-config>
+		<session-timeout>600</session-timeout>
+	</session-config>
 </web-app>

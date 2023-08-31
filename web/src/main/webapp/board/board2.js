@@ -1,7 +1,10 @@
+
+
 function b_write(){
 	//조건문
 	var t = CKEDITOR.instances.texts.getData();
 	console.log(t);
+		if(f.text.value)
 	//alert('aa');
 		if(f.btitle.value==""){
 			alert("제목이 입력되지 않았습니다.");
@@ -12,7 +15,7 @@ function b_write(){
 		else if(f.bpass.value==""){
 			alert("패스워드 입력창이 입력되지 않았습니다.");
 		}
-		else if(t==""){
+		else if(f.bcon.value==""){
 			alert("내용이 입력되지 않았습니다.");
 		}
 		else{

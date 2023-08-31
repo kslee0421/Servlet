@@ -9,7 +9,7 @@ import java.util.Scanner;
  Java + Database 응용편1
  게시판 작성하는 프로세서를 제작합니다.
  문의제목, 고객명, 패스워드는 6자리 이상, 문의내용
- 단, 패스워드는 암호화하지 않고 제작 합니다. 패스워드 6자리 이하 입력시 DB에 저장 안됩니다 lentgh
+ 단, 패스워드는 암호화하지 않고 제작 합니다. 패스워드 6자리 이하 입력시 DB에 저장 안됩니다 length
   
  */
 public class db_test_0 {
