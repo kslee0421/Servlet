@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Ajax + setInterval, setTimeout(최종편)</title>
+</head>
+<body>
+<table border="1" id="news">
+</table>
+<script>
+function data_load(){
+	var date = new Date().toString();
+	var ajax = new XMLHttpRequest();
+	ajax.onreadystatechange = function(){
+		//console.log(ajax.readyState);
+		/*
+		0 : 요청에 대한 초기화가 오류
+		1 : 서버에 연결함
+		2 : 서버에 파일을 요청 받음
+		3 : 요청을 처리중
+		4 : 요청에 대한 데이터 처리 완료
+		*/
+		if(ajax.readyState == 4){
+			if(ajax.status ==200){
+				var data = JSON.parse(this.response);
+				var ea = data.length;
+				//console.log(data["data"]);
+				var w =0;
+				var html = document.getElementById("news");
+				html.innerHTML=""; //HTML 초기화
+				while(w <ea){
+					html.innerHTML += `
+					<tr>
+					<td>`+data[w][0]+`</td>
+					<td>`+data[w][1]+`</td>
+					<tr>
+					`;
+					w++;
+				}
+					
+			}	
+			else{
+				console.log("통신오류 발생!!")
+			}
+		}
+	}
+	ajax.open("GET","./news.json?v="+date);
+	ajax.send();
+}
+	setInterval(data_load,10000);
+</script>
+
+</body>
+
+</html>

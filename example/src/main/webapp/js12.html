@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JS SetTimeout, SetInterval 응용편</title>
+</head>
+<body>
+<p>setTimeout</p>
+<input type="button" value="시작" onclick="time1()">
+<input type="button" value="정지" onclick="time1_stop()">
+<p>setInterval</p>
+<input type="button" value="시작" onclick="set()">  <!--setInterval의 경우 시작을 여러번 누르게 되면 stop을 못쓴다 : 이전 setInterval이 오버라이드되어서 핸들링을 못하게 된다-->
+<input type="button" value="정지" onclick="time2_stop()">
+</body>
+<script>
+var timer = 0 ;
+var sto;
+function time1(){
+	console.log(timer);
+	timer++;
+	sto =setTimeout(time1,1000); //시계하나
+}
+function time1_stop(){
+	clearTimeout(sto);
+}
+var timer2=0;
+var sto2;
+
+function set(){
+	sto2 = setInterval(time2,1000);
+}
+function time2(){
+	console.log(timer2);
+	sto2 = setInterval(time2,1000); //시계가 그때그때 늘어남
+	timer2++;
+}
+function time2_stop(){
+	clearInterval(sto2);;
+}
+</script>
+</html>

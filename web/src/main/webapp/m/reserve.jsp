@@ -28,7 +28,7 @@ ROOM 선택: 선택<br>
 </label>
 
 <label>
-<input type="radio" name="room value="러블리룸">러블리룸
+<input type="radio" name="room" value="러블리룸">러블리룸
 </label>
 인원 : 
 <select name="person">

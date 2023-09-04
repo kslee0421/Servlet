@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<% 
+ <% 
 	String user_id="";
 	String user_name =""; 
 	try{
@@ -15,9 +15,9 @@
     
 	}
 	catch(Exception e){
-		
+
 	}
-%>
+%>  
 <script>
 function gopage(){
 	location.href='./login.jsp';
@@ -30,3 +30,6 @@ function gopage(){
 <span><%=user_name%>님 환영합니다.</span><a href="./mlogout.jsp">[로그아웃]</a>
 <% } %>
 </div>
+
+
+
