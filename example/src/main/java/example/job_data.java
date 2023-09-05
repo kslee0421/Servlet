@@ -50,10 +50,16 @@ public class job_data extends HttpServlet {
 					JSONObject jo2 = new JSONObject();
 					while(ww < user.length) {  //2
 						if(ww==0) {
-							jo2.put("user_name",user[ww][w]);
+							jo2.put("kslee01",user[ww][w]);
 						}
 						else if(ww==1) {
-							jo2.put("analyze", user[ww][w]);
+							jo2.put("kslee02", user[ww][w]);
+						}
+						else if(ww==2) {
+							jo2.put("kslee03", user[ww][w]);
+						}
+						else if(ww==3) {
+							jo2.put("kslee04", user[ww][w]);
 						}
 						
 						System.out.println(user[ww][w]);
